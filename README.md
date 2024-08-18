@@ -17,10 +17,12 @@
 
 ### 1️⃣ Clone the repository and install the package
 
-```bash
+```
 git clone https://github.com/yourusername/webview-checker.git
 cd webview-checker
 pip install .
+```
+
 2️⃣ Set your Shodan API key
 To use the Shodan API, you must first set your API key as an environment variable.
 
@@ -35,29 +37,35 @@ Copy your API Key from the dashboard.
 Set the API Key as an environment variable
 
 For Windows (PowerShell)
+```
 $env:SHODAN_API_KEY="your_shodan_api_key"
-
+```
 
 For Windows (CMD)
+```
 set SHODAN_API_KEY="your_shodan_api_key"
-
+```
 
 For macOS/Linux (bash)
+```
 export SHODAN_API_KEY="your_shodan_api_key"
-
+```
 
 3️⃣ Run the CLI tool
 1. Analyze an IP address (using Shodan API)
+```
 webview-checker --ip 1.1.1.1
-
+```
 
 2. Scrape Google Play Store
+```
 webview-checker --url https://play.google.com/store/apps/details?id=com.example.app
-
+```
 
 3. Analyze both IP and URL simultaneously
+```
 webview-checker --ip 1.1.1.1 --url https://play.google.com/store/apps/details?id=com.example.app
-
+```
 
 🛠️ Components
 Shodan API Analysis: The module app/shodan_checker.py interacts with the Shodan API to analyze the provided IP address and gather web server information (e.g., open ports, server types).
